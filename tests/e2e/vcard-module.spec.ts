@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 
 import { test, expect } from "@playwright/test";
 
+import { PATH_PREFIX } from "../../scripts/lib/path-prefix.mjs";
 import { hubs, hasVcard } from "../lib/hubs";
 
 /**
@@ -17,14 +18,22 @@ import { hubs, hasVcard } from "../lib/hubs";
  *   2. The generator itself still produces a correct card from the SHIPPED src/_engine/
  *      file - escaping, CRLF, all four values, and no network request.
  *
- * ⚠ Honest limit (Constitution VIII): no business in the repo currently declares a `vcard`
- * entry, so claim 2 is exercised by loading the shipped module onto a hub page and driving it
- * with an injected trigger. That covers the generator. It does NOT cover the confirmed branch
- * of entry-vcard.njk, which has no rendering business to exercise it - and it says nothing at
- * all about whether iOS Safari opens the contact importer, which only T039 on real hardware
- * can settle.
+ * ⚠ Honest limit (Constitution VIII): the confirmed branch of entry-vcard.njk still has no
+ * business rendering it. `berrry-sin` declares a `vcard` entry, but its contact phone is the
+ * sentinel, so it renders PENDING - which exercises the loading seam (claim 1) but not the
+ * confirmed button. Claim 2 is therefore still driven by loading the shipped module onto a hub
+ * page with an injected trigger. That covers the generator, and says nothing about whether iOS
+ * Safari opens the contact importer - only T039 on real hardware settles that.
+ *
+ * ⚠ The request path MUST carry PATH_PREFIX. This assertion compares against what the BROWSER
+ * requests, and a project page is served from /<repo>/, so the pathname is
+ * "/nfc-hubs/_engine/vcard.js" and never the bare "/_engine/vcard.js". The bare literal was
+ * hardcoded here before the prefix existed (d567b22) and survived unnoticed, because until a
+ * business declared a `vcard` entry this assertion only ever ran its NEGATIVE branch: false
+ * === false passes without the path ever being compared to anything real. Deriving it from the
+ * one constant is what stops that recurring.
  */
-const VCARD_SCRIPT = "/_engine/vcard.js";
+const VCARD_SCRIPT = `${PATH_PREFIX}_engine/vcard.js`;
 
 for (const hub of hubs()) {
   const expected = hasVcard(hub.data);
