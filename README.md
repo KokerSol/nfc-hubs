@@ -9,7 +9,7 @@ own data.
 
 | Hub | Local URL | In production | Visual register |
 |-----|-----------|---------------|-----------------|
-| `demo` — [ES] "Taberna Vela y Sal" | `/demo/` | <https://diegojs97.github.io/nfc-hubs/demo/> | nocturnal |
+| `demo` — [ES] "Taberna Vela y Sal" | `/demo/` | <https://kokersol.github.io/nfc-hubs/demo/> | nocturnal |
 
 `demo` is a **fictional** venue, built so the product can be shown to a prospect. It is not a real
 client and its data is invented on purpose.
@@ -168,7 +168,7 @@ table without anyone physically rewriting the tags.
 
 ## Deployment
 
-**In production:** <https://diegojs97.github.io/nfc-hubs/demo/> — HTTPS enforced.
+**In production:** <https://kokersol.github.io/nfc-hubs/demo/> — HTTPS enforced.
 
 `.github/workflows/deploy.yml` builds with Eleventy, runs the full suite as the release gate, and
 deploys `_site/` to GitHub Pages on every push to `master`.

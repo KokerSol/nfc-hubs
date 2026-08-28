@@ -11,7 +11,7 @@ static output — no backend, no analytics, no client framework.
 There is **one generic archetype**, not a per-business one. The engine supports a catalog of
 entry types; each business instance chooses which types it uses and in what order, in its own
 data. `demo` ([ES] "Taberna Vela y Sal") is the only instance today — a fictional venue built to
-be shown to a prospect, deployed at <https://diegojs97.github.io/nfc-hubs/demo/>.
+be shown to a prospect, deployed at <https://kokersol.github.io/nfc-hubs/demo/>.
 
 Requirements live in `specs/001-nfc-hubs-fase1/` (spec.md FR-001–FR-024 / SC-001–SC-010,
 plan.md, tasks.md T001–T040) and `.specify/memory/constitution.md` (v1.1.0). When behaviour is
