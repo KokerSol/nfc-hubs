@@ -1,5 +1,11 @@
 # Phase 1 Validation Report (T040)
 
+> **Correction note, 2026-08-28.** This report records a validation run as it stood on its own
+> date, so its body is left unedited. Two things in it are now stale: the repository moved to the
+> `KokerSol` organisation, so the live site is <https://kokersol.github.io/nfc-hubs/demo/> and the
+> `diegojs97.github.io` addresses below no longer resolve; and the run itself has not been repeated
+> since. Treat the pass/fail counts as valid **as of 2026-08-08**, not as a current statement.
+
 **Date:** 2026-08-08
 **Suite:** 80 automated checks defined — **75 pass, 5 deliberately skipped**, 0 failing
 **Build:** `_site/demo/index.html`

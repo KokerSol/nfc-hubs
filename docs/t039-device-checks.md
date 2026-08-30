@@ -4,6 +4,11 @@ Cuatro comprobaciones que no se pueden automatizar. Cada una cubre una afirmaci�
 tests es estructuralmente incapaz de hacer: un WebKit emulado no es un iPhone, y axe no ve una
 habitación a oscuras.
 
+> **Nota 2026-08-28.** El repositorio se movió a la organización `KokerSol`. La URL de producción
+> es ahora <https://kokersol.github.io/nfc-hubs/demo/>; la anterior (`diegojs97.github.io`) ya no
+> resuelve. Las tres referencias de este documento están corregidas — si sigues este procedimiento
+> desde una copia antigua, comprueba la URL antes de grabar ninguna etiqueta.
+
 **Tiempo necesario:** ~30 minutos, más la grabación de la etiqueta.
 **Hace falta:** un iPhone, un Android, una etiqueta NFC virgen, una app para grabar etiquetas
 (NFC Tools o similar) y una habitación de verdad a oscuras.
@@ -46,7 +51,7 @@ Hay dos caminos, y **no son intercambiables**:
 
 | Camino | URL | Sirve para |
 |---|---|---|
-| **Sitio en producción** *(preferido)* | <https://diegojs97.github.io/nfc-hubs/demo/> | Comprobaciones **4 y 3** |
+| **Sitio en producción** *(preferido)* | <https://kokersol.github.io/nfc-hubs/demo/> | Comprobaciones **4 y 3** |
 | **Servidor local por LAN** *(alternativa)* | `http://<ip-de-esta-máquina>:8080/demo/` | Comprobaciones **1 y 2**, y todo si estás sin conexión |
 
 **Las comprobaciones 1 y 2 tienen que ir por LAN.** Necesitan datos de contacto de prueba
@@ -250,7 +255,7 @@ Ahora hay una URL pública real, así que esta comprobación ya no depende de la
 > que no grabes etiquetas de ningún local contra ella (`contracts/hub-url.md`).
 
 1. Con la app de grabación, escribe un registro **URL / URI**:
-   `https://diegojs97.github.io/nfc-hubs/demo/?m=1`
+   `https://kokersol.github.io/nfc-hubs/demo/?m=1`
    (sin conexión, la alternativa es `http://<dirección>:8080/demo/?m=1`)
 2. **Prueba desbloqueado:** móvil desbloqueado, pantalla encendida, acércalo a la etiqueta
 3. **Prueba bloqueado:** bloquea el móvil, pantalla apagada, acércalo a la etiqueta
@@ -326,7 +331,7 @@ decirte si el diseño es cómodo para un ojo real, adaptado a la oscuridad, con 
 2. Métete en una habitación de verdad a oscuras. Deja que los ojos se adapten un par de minutos
 3. Pon el móvil al brillo que usarías de verdad en la mesa de un bar — **bajo**, no al máximo
    automático
-4. Abre <https://diegojs97.github.io/nfc-hubs/demo/>
+4. Abre <https://kokersol.github.io/nfc-hubs/demo/>
 
 **PASA** si se cumple todo:
 

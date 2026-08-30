@@ -1,8 +1,10 @@
 # NFC Hubs — Project Overview
 
 **Status:** Phase 1 built, verified on real hardware, and deployed. Live at
-<https://diegojs97.github.io/nfc-hubs/demo/>.
-**Last updated:** 2026-08-08
+<https://kokersol.github.io/nfc-hubs/demo/>.
+**Last updated:** 2026-08-08. *Host URL corrected 2026-08-28 — the repository moved to the
+`KokerSol` organisation and the previous address no longer resolves. Nothing else in this document
+was re-verified on that date.*
 
 ---
 

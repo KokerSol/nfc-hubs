@@ -1,5 +1,16 @@
 # Pivot summary — from two named archetypes to one generic one
 
+> **Correction note, 2026-08-28 — the URLs and repository paths below are historical.**
+> The repository has since moved to the `KokerSol` organisation, and the live site is now
+> <https://kokersol.github.io/nfc-hubs/demo/>. Every `diegojs97.github.io` URL and every
+> `repos/DiegoJS97/nfc-hubs` path in this document is **left as written on purpose**: the `gh api`
+> calls in "Deployment" are a record of commands that were actually executed against that account
+> at that time, and rewriting them would turn a true record into a false one. `PATH_PREFIX` is
+> unaffected — it is tied to the repository *name*, which did not change.
+>
+> This applies to this document only. `docs/overview.md` and `docs/t039-device-checks.md` are
+> living documents and were corrected in place on the same date.
+
 **Date**: 2026-08-07 (documentation pass: 2026-08-08)
 **Branch**: `master`
 **Commits**: `c59e192`, `bd4aeae`, `a5e5a14`, `573b408`, `d567b22`, `7f1a42f`, `02527a6`, `aba4b2c`,
