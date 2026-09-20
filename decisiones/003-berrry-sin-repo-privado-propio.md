@@ -1,6 +1,6 @@
 # 003 — `berrry-sin` tiene su propio repositorio privado
 
-- **Estado:** aceptada, **aplicada a medias**
+- **Estado:** aceptada y **aplicada**
 - **Fecha:** 2026-09-20
 - **Aplica a:** `nfc-hubs`, carpeta `src/businesses/berrry-sin/`
 
@@ -40,15 +40,18 @@ dos estaba escrita, y una regla en `CLAUDE.md` decía «nunca comitear» como ab
 | Paso | Estado |
 |---|---|
 | Repo local con primer commit (`86b7bd7`) | ✅ hecho |
-| Remoto privado en GitHub | ❌ **pendiente** |
+| Remoto privado en GitHub | ✅ hecho — `DiegoJS97/berrry-sin`, `private: true` verificado |
+| Transferir el repo a la cuenta KokerSol | 🟡 cuando Diego quiera; no urge |
 
-**Por qué está pendiente:** `gh repo create KokerSol/...` falla siempre — `KokerSol` es una
-cuenta de **usuario**, no una organización, y `DiegoJS97` solo tiene `push`, no `admin`. Y el
-intento de crearlo bajo `DiegoJS97` lo bloqueó el clasificador por la entrada de
-`autoMode.hard_deny`, que es justo lo que el §6.2 de `METODO.md` propone sustituir.
+**Por qué está bajo `DiegoJS97` y no bajo KokerSol:** `gh repo create KokerSol/...` falla siempre
+— `KokerSol` es una cuenta de **usuario**, no una organización, y `DiegoJS97` solo tiene `push`,
+no `admin`. Nadie puede crear repos bajo la cuenta de otro usuario. Decisión de Diego el 20-sep:
+dejarlo bajo su cuenta y transferirlo él más adelante desde la web de GitHub.
 
-**Para cerrarlo:** crear el repo privado entrando con la cuenta KokerSol, o aceptar que viva bajo
-`DiegoJS97` y transferirlo luego. Después: `git remote add origin <url>` y `git push -u origin main`.
+El primer intento también lo bloqueó el clasificador, por la entrada de `autoMode.hard_deny` que
+nombraba `berrry-sin`. Esa entrada se sustituyó el mismo día por el hook
+`bloquea-publicacion.ps1`, determinista, que impide crear repos **públicos** pero no estorba a
+los privados. Ver `METODO.md` seccion 6.2.
 
 ## Cómo se verifica
 
