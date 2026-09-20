@@ -32,3 +32,10 @@ Thumbs.db
 
 # Editor (opcional, descomenta si no quieres compartir tu config de VS Code)
 # .vscode/
+
+# Instancias de negocio: lista blanca.
+# Se ignora TODO lo que hay bajo src/businesses/ y se readmite solo lo publico.
+# Asi una instancia privada no aparece nombrada en ningun sitio, y una nueva
+# queda excluida por defecto sin tener que acordarse de nada.
+src/businesses/*
+!src/businesses/demo/
